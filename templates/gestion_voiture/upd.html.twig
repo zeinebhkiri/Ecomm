@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier voiture{% endblock %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Modifier voiture</h1>
+
+        <!-- Formulaire avec Bootstrap -->
+        {{ form_start(formvoiture, {'attr': {'class': 'form-group'}}) }}
+
+        <div class="mb-3">
+            {{ form_row(formvoiture.nom, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_row(formvoiture.description, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_row(formvoiture.prix, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_row(formvoiture.utilisateur, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="mb-3">
+            {{ form_row(formvoiture.category, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Modifier Voiture</button>
+
+        {{ form_end(formvoiture) }}
+    </div>
+{% endblock %}
